@@ -20,4 +20,4 @@ jobs:
         run: docker build -t mahin/docker_react -f Dockerfile.dev .
 
       - name: Run tests
-        run: docker run -e CI=true mahin/docker_react npm run test
+        run: docker run -e CI=true mahin/docker_react npm run test -- --coverage
