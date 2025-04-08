@@ -1,9 +1,9 @@
-sudo : required
+sudo: required
 services:
   - docker
 
 before_install:
-  - docker build -t mahin/Docker_React -f dockerfile.dev .
+  - docker build -t mahin/docker_react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true mahin/Docker_React npm run test
+  - docker run -e CI=true mahin/docker_react npm run test
