@@ -1,0 +1,9 @@
+sudo : required
+services:
+  - docker
+
+before_install:
+  - docker build -t mahin/Docker_React -f dockerfile.dev .
+
+script:
+  - docker run -e CI=true mahin/Docker_React npm run test
